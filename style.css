@@ -170,8 +170,8 @@ footer { position: relative; z-index: 2; padding: 3rem 2rem; border-top: 1px sol
 .work-card.placeholder:hover { transform: none; box-shadow: none; border-color: rgba(196, 163, 90, 0.2); }
 
 /* Pop-up Overlay */
-.popup-overlay { position: fixed; bottom: 2rem; left: 2rem; z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s ease; }
-.popup-overlay.active { opacity: 1; visibility: visible; transform: translateY(0); }
+.popup-overlay { position: fixed !important; bottom: 2rem !important; left: 2rem !important; z-index: 99999 !important; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.4s ease; pointer-events: none; }
+.popup-overlay.active { opacity: 1 !important; visibility: visible !important; transform: translateY(0); pointer-events: auto; }
 .popup-container { background: rgba(93, 122, 122, 0.98); backdrop-filter: blur(10px); border: 1px solid rgba(196, 163, 90, 0.3); border-radius: 12px; padding: 1rem; display: flex; gap: 1rem; align-items: center; max-width: 380px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
 .popup-close { position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; background: var(--ocean-deep); border: 1px solid rgba(196, 163, 90, 0.3); border-radius: 50%; color: var(--parchment); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; line-height: 1; }
 .popup-close:hover { background: var(--gold-accent); color: var(--ocean-deep); }
