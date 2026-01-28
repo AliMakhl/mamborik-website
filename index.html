@@ -9,23 +9,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        #popup-box {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999999;
+            background: rgba(93, 122, 122, 0.98);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(196, 163, 90, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            display: none;
+            gap: 1rem;
+            align-items: center;
+            max-width: 380px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+        #popup-box.show { display: flex; }
+        #popup-box .popup-close {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 24px;
+            height: 24px;
+            background: #3d5a5a;
+            border: 1px solid rgba(196, 163, 90, 0.3);
+            border-radius: 50%;
+            color: #f4ede4;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #popup-box img { width: 80px; border-radius: 6px; }
+        #popup-box h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: #f4ede4; margin: 0 0 0.25rem 0; }
+        #popup-box p { font-size: 0.8rem; color: #d4cdc4; margin: 0 0 0.75rem 0; }
+        #popup-box a.popup-link { font-family: 'Cinzel', serif; font-size: 0.7rem; color: #D4B86A; text-decoration: none; }
+    </style>
 </head>
 <body>
-    <div class="popup-overlay" id="popup">
-        <div class="popup-container">
-            <button class="popup-close" id="popup-close">&times;</button>
-            <a href="mary-und-das-lamm.html" class="popup-image">
-                <img src="images/cover_mary_de.png" alt="Mary und das Lamm">
-            </a>
-            <div class="popup-content">
-                <div class="popup-text">
-                    <h3>Bald erhältlich!</h3>
-                    <p>Mary und das Lamm – Ein Kinderbuch-Abenteuer</p>
-                </div>
-                <a href="mary-und-das-lamm.html" class="popup-btn">Hier geht es zum Buch →</a>
-            </div>
-        </div>
-    </div>
     <div class="ocean-bg"></div>
     <header>
         <nav>
@@ -117,14 +141,25 @@
         </div>
         <p class="copyright">© mamborik.de 2024</p>
     </footer>
+
+    <!-- Pop-up Box -->
+    <div id="popup-box">
+        <button class="popup-close" onclick="document.getElementById('popup-box').classList.remove('show');">&times;</button>
+        <a href="mary-und-das-lamm.html"><img src="images/cover_mary_de.png" alt="Mary und das Lamm"></a>
+        <div>
+            <h3>Bald erhältlich!</h3>
+            <p>Mary und das Lamm – Ein Kinderbuch-Abenteuer</p>
+            <a href="mary-und-das-lamm.html" class="popup-link">Hier geht es zum Buch →</a>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var popup = document.getElementById('popup');
-        var popupClose = document.getElementById('popup-close');
-        setTimeout(function() { popup.classList.add('active'); }, 1000);
-        popupClose.addEventListener('click', function() { popup.classList.remove('active'); });
-        popup.addEventListener('click', function(e) { if (e.target === popup) { popup.classList.remove('active'); } });
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('popup-box').classList.add('show');
+        }, 1000);
+        
         var stories = [
             { url: 'der-soldat.html', img: 'images/cover_soldat_de.png', alt: 'Der Soldat', title: 'Der Soldat', desc: 'Über die Abgründe des Krieges – eine bewegende Erzählung.' },
             { url: 'unbekannt.html', img: 'images/cover_unbenannt_de.png', alt: 'Unbekannt', title: 'Unbekannt', desc: 'Die Welt um fünf vor zwölf – eine Geschichte über das Unsichtbare.' },
@@ -136,7 +171,7 @@
         document.getElementById('random-story-img').alt = story.alt;
         document.getElementById('random-story-title').textContent = story.title;
         document.getElementById('random-story-desc').textContent = story.desc;
-    });
+    };
     </script>
 </body>
 </html>
