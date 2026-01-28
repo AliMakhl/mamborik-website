@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werke – mamborik.de</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Scroll-Offset für Anker */
+        #kinderbuecher, #kurzgeschichten, #romane {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ocean-bg"></div>
+    <header class="scrolled">
+        <nav>
+            <a href="index.html" class="nav-logo">MAMBORIK</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="werke.html" class="active">Werke</a>
+                    <ul class="dropdown-menu">
+                        <li class="sub-dropdown">
+                            <a href="werke.html#kinderbuecher">Kinderbücher</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="mary-und-das-lamm.html">Mary und das Lamm</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-dropdown">
+                            <a href="werke.html#kurzgeschichten">Kurzgeschichten</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="der-soldat.html">Der Soldat</a></li>
+                                <li><a href="unbekannt.html">Unbekannt</a></li>
+                                <li><a href="mondlicht.html">Mondlicht</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="bald-erhaeltlich.html">Bald erhältlich</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    
+    <section class="page-hero">
+        <h1>Meine Werke</h1>
+        <p class="subtitle">Geschichten aus fernen Welten und nahen Herzen</p>
+    </section>
+
+    <!-- Kinderbücher -->
+    <section class="category-section" id="kinderbuecher">
+        <div class="section-header">
+            <h2>Kinderbücher</h2>
+            <p class="subtitle">Magische Abenteuer für junge Leser</p>
+        </div>
+        <div class="works-grid">
+            <a href="mary-und-das-lamm.html" class="work-card">
+                <div class="work-image"><img src="images/cover_mary_de.png" alt="Mary und das Lamm"></div>
+                <div class="work-info">
+                    <span class="work-category">Für Kinder ab 8</span>
+                    <h3>Mary und das Lamm</h3>
+                    <p>Eine herzerwärmende Geschichte über Freundschaft, Mut und die Magie der Kindheit.</p>
+                </div>
+            </a>
+            <div class="work-card placeholder">
+                <div class="work-image" style="background: linear-gradient(135deg, rgba(196,163,90,0.15), rgba(93,122,122,0.2)); display: flex; align-items: center; justify-content: center; min-height: 280px;">
+                    <span style="font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold-accent); opacity: 0.7;">?</span>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">In Vorbereitung</span>
+                    <h3>DBMUDW</h3>
+                    <p>Der Titel bleibt geheim... Bald mehr!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"><span>◆</span></div>
+
+    <!-- Kurzgeschichten -->
+    <section class="category-section" id="kurzgeschichten">
+        <div class="section-header">
+            <h2>Kurzgeschichten</h2>
+            <p class="subtitle">Kompakte Erzählungen mit Tiefgang</p>
+        </div>
+        <div class="works-grid">
+            <a href="der-soldat.html" class="work-card">
+                <div class="work-image"><img src="images/cover_soldat_de.png" alt="Der Soldat"></div>
+                <div class="work-info">
+                    <span class="work-category">Kurzgeschichte</span>
+                    <h3>Der Soldat</h3>
+                    <p>Über die Abgründe des Krieges – eine bewegende Erzählung.</p>
+                </div>
+            </a>
+            <a href="unbekannt.html" class="work-card">
+                <div class="work-image"><img src="images/cover_unbenannt_de.png" alt="Unbekannt"></div>
+                <div class="work-info">
+                    <span class="work-category">Kurzgeschichte</span>
+                    <h3>Unbekannt</h3>
+                    <p>Die Welt um fünf vor zwölf – eine Geschichte über das Unsichtbare.</p>
+                </div>
+            </a>
+            <a href="mondlicht.html" class="work-card">
+                <div class="work-image"><img src="images/cover_mondlicht_de.png" alt="Mondlicht"></div>
+                <div class="work-info">
+                    <span class="work-category">Kurzgeschichte</span>
+                    <h3>Mondlicht</h3>
+                    <p>Eine Liebe jenseits des Todes.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">MAMBORIK</div>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <p class="copyright">© mamborik.de 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
