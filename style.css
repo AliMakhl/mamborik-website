@@ -30,7 +30,7 @@ nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-b
 .nav-links .dropdown-menu a:hover { background: rgba(196, 163, 90, 0.1); }
 .nav-links .sub-dropdown { position: relative; }
 .nav-links .sub-dropdown > a::after { content: ' ›'; }
-.nav-links .sub-dropdown .dropdown-menu { left: 100%; top: 0; }
+.nav-links .sub-dropdown .dropdown-menu { left: 100%; top: 0; opacity: 0; visibility: hidden; }
 .nav-links .sub-dropdown:hover > .dropdown-menu { opacity: 1; visibility: visible; }
 
 .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6rem 2rem; z-index: 2; }
